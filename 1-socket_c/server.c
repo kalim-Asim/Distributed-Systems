@@ -4,7 +4,7 @@
  *
  * Description of experimental set-up:
  * Code developed on Fedora Linux 43 (Workstation Edition) using GCC 15.2.1
- * Compilation flags: -o server server.c and -o client client.c
+ * Compilation flags: -o server server.c
  *
  * Remarks/Observations:
  * The server handles 3 clients sequentially or concurrently.

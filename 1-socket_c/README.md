@@ -10,8 +10,11 @@ This project implements a multi-process client-server architecture using C socke
 
 ## File Structure
 * `server.c` - Server logic (Handle connections, compute average, determine winner).
-* `client.c` - Client logic (Generate numbers, send data, receive result).
+* `client1.c` - Client1 logic (Generate numbers, send data, receive result).
+* `client2.c` - Client2 logic (Generate numbers, send data, receive result).
+* `client3.c` - Client3 logic (Generate numbers, send data, receive result).
 * `README.md` - Documentation and execution steps.
+* `client.c` - (Older version) Client logic (Generate numbers, send data, receive result).
 
 ## Compilation Instructions
 Open your terminal and run the following commands to compile the source code:
@@ -21,8 +24,9 @@ Open your terminal and run the following commands to compile the source code:
 gcc -o server server.c
 
 # Compile the Client
-gcc -o client client.c
-
+gcc -o client1 client1.c
+gcc -o client2 client2.c
+gcc -o client3 client3.c
 ```
 
 ## Execution Instructions
@@ -42,8 +46,7 @@ Start the server first. It will listen for incoming connections.
 **2. Terminal 2 (Client 1)**
 
 ```bash
-./client 1
-
+./client1
 ```
 
 *Status: Connects, sends data, and **waits** (blocks) until other clients join.*
@@ -51,8 +54,7 @@ Start the server first. It will listen for incoming connections.
 **3. Terminal 3 (Client 2)**
 
 ```bash
-./client 2
-
+./client2
 ```
 
 *Status: Connects, sends data, and **waits**.*
@@ -60,8 +62,7 @@ Start the server first. It will listen for incoming connections.
 **4. Terminal 4 (Client 3)**
 
 ```bash
-./client 3
-
+./client3
 ```
 
 *Status: Connects and sends data. This triggers the server to process logic. All terminals will now update with results and terminate.*
